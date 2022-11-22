@@ -1,0 +1,17 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: wordpress-floether
+spec:
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`floether.noobygames.de`)
+    kind: Rule
+    middlewares:
+      - name: redirect-to-https
+        namespace: wordpress-floether
+    services:
+    - name: wordpress-floether
+      #kind: TraefikService
+      port: 80
