@@ -1,0 +1,16 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: nextcloud-tls
+spec:
+  entryPoints:
+    - websecure
+  routes:
+  - match: Host(`nextcloud.noobygames.de`)
+    kind: Rule
+    services:
+    - name: nextcloud
+      #kind: TraefikService
+      port: 8080
+  tls:
+    certResolver: letsencrypt

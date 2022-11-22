@@ -1,0 +1,5 @@
+additionalArguments:
+  - --certificatesresolvers.letsencrypt.acme.tlschallenge=true
+  - --certificatesresolvers.letsencrypt.acme.email=info@noobygames.de
+  - --certificatesresolvers.letsencrypt.acme.storage=/data/letsencrypt.json
+  

@@ -1,0 +1,17 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: nextcloud
+spec:
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`nextcloud.noobygames.de`)
+    kind: Rule
+    middlewares:
+      - name: redirect-to-https
+        namespace: nextcloud
+    services:
+    - name: nextcloud
+      #kind: TraefikService
+      port: 8080
