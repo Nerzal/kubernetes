@@ -29,10 +29,22 @@ disqusShortname = 'Nerzal'
     enable_menu_footer_primary = true
     footer_primary_menu_title = "Impressum"
 
-[[params.ananke_socials]]
+[[params.socials]]
   name = "twitter"
   url = "https://twitter.com/Noobygames"
 
+
+[[params.socials]]
+  name = "mastodon"
+  url = "https://mastodon.lol/@nerzal"
+
+[[params.socials]]
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/tobias-theel-3353a9181"
+
+[[params.socials]]
+  name = "github"
+  url = "https://github.com/Nerzal"
 
 
 [privacy]

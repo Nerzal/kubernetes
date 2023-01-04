@@ -66,6 +66,11 @@ li a:hover {
 }
 
 .link-transition-highlight {
+    color: var(--text-color);
+}
+
+.link-transition-highlight:focus,
+.link-transition-highlight:hover {
     color: var(--highlight-color);
     transition: color 0.5s;
 }
